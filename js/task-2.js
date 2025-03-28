@@ -1,9 +1,12 @@
 function calcAverageCalories(days) {
+  if (days.length === 0) {
+    return 0;
+  }
   let allWeekCalories = 0;
   for (const day of days) {
     allWeekCalories += day.calories;
   }
-  return allWeekCalories / 7;
+  return allWeekCalories / days.length;
 }
 
 console.log(
